@@ -47,95 +47,37 @@ void draw() {
     createBalls();
     done = true;
   }
+  
   lights();
   background(0);
-  if(frameCount > -1)
-  {
-    
-    
+  if(frameCount > -1){
+  
+  
     int infection_count = 0;
     Ball random = balls[int(random(0, row*col))];
-      if (random != null) {
-          random.infect(3);
-        }
-        
-    for(Ball b: balls)
-
-    {
+    if (random != null) {
+      random.infect(3);
+    }
+    
+    for(Ball b: balls){
       if(b != null){
-
-        
-      if(b.I > random(0, 100000))
-      {
-        
-        b.setFill(255,0,0);
-        for(Ball node:b.neighbourNodes){
-         node.infect(1);
+        if(b.I > random(0, 100000)) {
+          
+          b.setFill(255,0,0);
+          for(Ball node:b.neighbourNodes){
+            node.infect(1);
+          }
+          infection_count++;
+          
         }
         
-
-       infection_count++;
+        b.showSphere();
+        b.update();
       }
-      b.showSphere();
-      b.update();
     }
-    }
-
-}
-  
-
-}
-
-
-float get_brightness(PImage img)
-{
-  float b = 0;
-  for(int i = 0; i < img.pixels.length; i++)
-  {
-    b += brightness(img.pixels[i]);
-  }
-  b /= img.pixels.length;
-  return b;
-}
-
-
-void createBalls(){
-  
-    for(int j = 0; j < row; j++)            //create balls
-  {
-    lat = map(j, 0, row, 0, PI);
-    for(int i = 0; i < col; i++)
-    {
-      lon = map(i,0,col,0, TWO_PI);
-      float x = i * (float(width) / float(col)) + size; // rr*sin(lat) * cos(lon);
-      float y = j * (float(height) / float(row)) + size; //rr*sin(lat) * sin(lon);
-      float z = -15; // rr*cos(lat);
-      int index = i + j*col;
-      
-
-      if(imgArr[index] > th)
-      {
-        balls[index] = new Ball(index, x,y,z, size, 100000, 0, BETA, GAMMA);
-
-        onoff[index] = true;
-      }
-      else 
-      {
-        onoff[index] = false;
-      }
-      
-    }
+    
   }
 
-  for(Ball b : balls){
-    if(b != null){
-      
-        b.createNetwork();
-        b.setStroke(0,0,0);
-        b.setFill(0,255,0);
-        
-      }
-  }
-   
+  //saveFrame("SIR_ANIM-#####.png");
+
 }
-  
