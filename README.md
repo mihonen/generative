@@ -1,6 +1,6 @@
 # Generative
 
-*Animations and generative art projects made with processing*
+*Animations and generative art made with processing*
 
 
 ### Script previews
