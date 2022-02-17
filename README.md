@@ -6,7 +6,7 @@
 ### Script previews
 
 ##### SIR model
-![SIR](https://github.com/mihonen/generative/master/previews/SIR.gif)
+![SIR](./previews/SIR.gif)
 
 
 ##### Magic pyramid
