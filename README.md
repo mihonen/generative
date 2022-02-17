@@ -6,8 +6,8 @@
 ### Script previews
 
 ##### SIR model
+![SIR](https://user-images.githubusercontent.com/65973207/154506111-3cb43b97-8c79-411c-85a5-483f01ab3ffd.gif)
 
-![sir](https://user-images.githubusercontent.com/65973207/154504935-fce494ee-ffff-4745-bc8e-b03bb553d1c5.gif)
 
 ##### Magic pyramid
 
