@@ -1,2 +1,4 @@
-# generative
-Animations and generative art with processing
+# Generative
+**Animations and generative art projects made with processing**
+
+
